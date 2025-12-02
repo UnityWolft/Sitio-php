@@ -43,8 +43,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
   $cue = $user['USU_CUE'];
   $matc = $user['USU_MATCH'];
 }
-?>
-<!DOCTYPE html>
+?><!DOCTYPE html>
 <html lang="es">
 <head>
   <meta charset="utf-8">
