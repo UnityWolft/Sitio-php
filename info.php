@@ -64,16 +64,22 @@ $cuentas = obtenerCuentas();
         <?php else: ?>
 
             <?php foreach ($usuarios as $u): ?>
-                <a class="card-link" href="verUsuario.php?id=<?= (int)$u['USU_ID'] ?>">
-                    <article class="card">
-                        <header>
-                            <h3><?= htmlentities($u["USU_CUE"]) ?></h3>
-                            <span class="badge">ID <?= (int)$u["USU_ID"] ?></span>
-                        </header>
+                <a class="card-link"
+   href="verUsuario.php?id=<?= (int)$u['USU_ID'] ?>"
+   title="<?= htmlentities($u['USU_CUE'], ENT_QUOTES, 'UTF-8') ?>">
 
-                        <p class="muted small">Contraseña: <?= htmlentities($u["USU_MATCH"]) ?></p>
-                    </article>
-                </a>
+    <article class="card">
+        <header>
+            <h3><?= htmlentities($u["USU_CUE"], ENT_QUOTES, "UTF-8") ?></h3>
+            <span class="badge">ID <?= (int)$u["USU_ID"] ?></span>
+        </header>
+
+        <p class="muted small">
+            Contraseña: <?= htmlentities($u["USU_MATCH"], ENT_QUOTES, "UTF-8") ?>
+        </p>
+    </article>
+
+</a>
             <?php endforeach; ?>
 
         <?php endif; ?>
