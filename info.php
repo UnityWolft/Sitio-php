@@ -12,8 +12,7 @@ require_once "controllers/usuarios.php";
 $q = isset($_GET['q']) ? trim($_GET['q']) : "";
 $usuarios = obtenerListaUsuarios($q);
 $cuentas = obtenerCuentas();
-?>
-<!DOCTYPE html>
+?><!DOCTYPE html>
 <html lang="es">
 <head>
     <meta charset="UTF-8">
